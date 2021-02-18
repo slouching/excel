@@ -1,4 +1,4 @@
-import {$} from '@core/dom';
+import {$} from '@core/dom'
 
 export function resizeHandler($root, event) {
   const $resizer = $(event.target)
@@ -17,15 +17,11 @@ export function resizeHandler($root, event) {
     if (type === 'col') {
       const delta = e.pageX - coords.right
       value = coords.width + delta
-      $resizer.css({
-        right: -delta + 'px'
-      })
+      $resizer.css({right: -delta + 'px'})
     } else {
       const delta = e.pageY - coords.bottom
       value = coords.height + delta
-      $resizer.css({
-        bottom: -delta + 'px'
-      })
+      $resizer.css({bottom: -delta + 'px'})
     }
   }
 
@@ -42,7 +38,7 @@ export function resizeHandler($root, event) {
     }
 
     $resizer.css({
-      opacity: 1,
+      opacity: 0,
       bottom: 0,
       right: 0
     })
